@@ -12,7 +12,6 @@ class Stack():
         else:
             self.stk = list(a)
     def __str__(self):
-        self.tempStk = [i for i in self.stk]+[f'stack{len(self.stk)}']
         return str(self.stk)+str(f'stack{len(self.stk)}')
     def __len__(self):
         return len(self.stk)
@@ -31,10 +30,4 @@ class Stack():
         return self.stk[len(self.stk)-1]
     
 if __name__ == "__main__":
-    x = Stack([12,123,12,133,13])
-    x.push(123)
-    x.push(120)
-    x.pop()
-    x.push(11231)
-    print(x.top)
-    print(x.peek)
+    print('Creating and implemeting stack in python')
