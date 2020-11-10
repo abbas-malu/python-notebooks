@@ -104,7 +104,7 @@ class Enc_Dec():
                         for char in string_enc:
                             enc_lst = compt[check_type(char)]
                             if check_type(char)=='upper' or check_type(char)=='lower' or check_type(char)=='digit' or check_type(char)=='punc':
-                                out_str += enc_lst[enc_lst.index(char)-encryption_level*2]
+                                out_str += enc_lst[enc_lst.index(char)-(encryption_level*2)+26]
                                 pass
                             else:
                                 out_str += enc_lst[enc_lst.index(char)-encryption_level]
@@ -120,7 +120,3 @@ if __name__ == "__main__":
     x = Enc_Dec()
     print(x.encrypt('abbas_malu_123', 1))
     print(x.decrypt('cddcu{ocnw{345', 1))
-    lower = list(string.ascii_lowercase.lstrip('a')) + \
-                list(string.ascii_lowercase.rstrip('z'))
-    print(lower)
-    print(lower[lower.index('c')-2])
