@@ -18,6 +18,7 @@ for char_list in char_group:
     for char in char_list:
         main_dict['character'].append(char)
 while len(main_dict['pos_1']) != 100:
+    print(len(main_dict['pos_1']))
     pos_1 = random.randint(0, len(all_char)-1)
     pos_2 = random.randint(0, len(all_char)-1)
     pos_3 = random.randint(0, len(all_char)-1)
