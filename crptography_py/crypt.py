@@ -54,6 +54,16 @@ def decrypt(string_to_be_decrypted):
         main_index = main_dict['pos_1'].index(main_dict['character'].index(i[0]))
         decrypted_string += main_dict['character'][main_index]
     return decrypted_string
-my_dec = encrypt('i am great boy 123')
-print(decrypt(my_dec))
-print(encrypt('i am great boy 123'))
+
+while True:
+    ch = int(input('Press \n1 to encrypt \n2 to decrpyt \n3 to exit \n>>'))
+    if ch==1:
+        st = input('Enter String to be encrypted: ')
+        print(f'Encrypted String is:\n{encrypt(st)}')
+    elif ch==2:
+        st = input('Enter String to be decrypted: ')
+        print(f'Encrypted String is:\n{decrypt(st)}')
+    elif ch==3:
+        break
+    else:
+        print('Wrong Choice')
